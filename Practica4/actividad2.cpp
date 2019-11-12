@@ -6,7 +6,7 @@
 
 #define N 3
 #define M 3
-#define layout LAPACK_ROW_MAJOR
+#define LAYOUT LAPACK_ROW_MAJOR
 
 int actividad2::execute(){
 	std::default_random_engine generador;
@@ -19,7 +19,7 @@ int actividad2::execute(){
 
 	std::cout << "Matriz Original" << '\n';
 	tools::print_matrix(matrixa, M, N);
-	LAPACKE_dgesv(layout, N, N, matrixa, M, piv, matrixb, M);
+	LAPACKE_dgesv(LAYOUT, N, N, matrixa, M, piv, matrixb, M);
 	std::cout << "Factorizacion LU" << '\n';
 	tools::print_matrix(matrixa, M, N);
 	std::cout << "Matriz Inversa" << '\n';

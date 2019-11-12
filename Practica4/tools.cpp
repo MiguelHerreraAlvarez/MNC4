@@ -21,7 +21,8 @@ double tools::diagonal_product(double matrix[], int m, int n) {
 int tools::detp(int piv[], int length)
 {
 	int j;
-	double detp = 1.;
+	int detp = 1;
+	
 	for (j = 0; j < length; j++) {
 		if (j + 1 != piv[j]) {
 			// j+1 : following feedback of ead : ipiv is from Fortran, hence starts at 1.
@@ -29,5 +30,6 @@ int tools::detp(int piv[], int length)
 			detp = -detp;
 		}
 	}
+	
 	return detp;
 }
