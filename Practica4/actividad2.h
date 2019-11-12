@@ -2,5 +2,5 @@
 class actividad2
 {
 public:
-	static void execute();
+	static int execute();
 };
