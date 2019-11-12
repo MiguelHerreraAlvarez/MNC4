@@ -1,6 +1,6 @@
 #include "actividad3.h"
 
-void actividad3::execute()
+int actividad3::execute()
 {
-	
+	return 0;
 }
